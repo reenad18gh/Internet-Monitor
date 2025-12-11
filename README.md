@@ -1,43 +1,18 @@
-# Internet Monitor
+# Network Uptime Monitor
 
-Python tool monitors internet connection and records every status change.  
-Shows uptime, logs events, sends alerts, and generates a live HTML status page.
-
----
-
-## Features
-
-- Check connection every few seconds
-- Detect status change (Connected or Not Connected)
-- Log changes with date and time
-- Show uptime percentage
-- Auto-generate HTML status page
-- Optional alerts  
-  - sound  
-  - email  
-  - Telegram
-
----
+Small Python project to monitor internet connectivity, log uptime, send alerts, and show a simple HTML dashboard.
 
 ## How it works
 
-- Tries to reach DNS server 8.8.8.8 on port 53  
-- Logs status changes  
-- Tracks uptime and downtime  
-- Writes live HTML file `status.html`  
-- Sends alert when connection is down for `ALERT_DOWN_SECONDS`
+- `monitor.py` runs a ping check to the target host
+- Logs each check to `data/uptime_log.csv`
+- Computes overall uptime percentage
+- Writes the latest status to `web/status.json`
+- Sends alerts to Telegram and email when the status changes
 
----
+## Setup
 
-## Demo
+1. Create virtual environment and install dependencies
 
-Status Page  
-(Refresh manually to see new data)
-
-https://reenad18gh.github.io/Internet-Monitor/status.html
-
-
----
-
-## Run
-
+   ```bash
+   pip install -r requirements.txt
