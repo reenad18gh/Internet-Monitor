@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Network Uptime Monitor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Network Uptime Monitor</h1>
+
+    <section class="card">
+      <h2>Status</h2>
+      <p id="status-text">Loading...</p>
+    </section>
+
+    <section class="card">
+      <h2>Uptime</h2>
+      <p id="uptime-text">Loading...</p>
+      <div class="bar-wrapper">
+        <div id="uptime-bar" class="bar-fill"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Details</h2>
+      <p id="timestamp-text"></p>
+      <p id="checks-text"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
