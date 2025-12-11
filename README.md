@@ -16,3 +16,31 @@ Small Python project to monitor internet connectivity, log uptime, send alerts, 
 
    ```bash
    pip install -r requirements.txt
+Copy config example
+
+bash
+Copy code
+cp config_example.py config.py
+Edit config.py and add your Telegram and email settings
+
+Run the monitor once
+
+bash
+Copy code
+python monitor.py
+Serve the web folder
+
+bash
+Copy code
+cd web
+python -m http.server 8000
+Open http://localhost:8000 in your browser.
+
+Automation
+Use cron on Linux to run the monitor every minute
+
+bash
+Copy code
+* * * * * /usr/bin/python3 /path/to/network-uptime-monitor/monitor.py
+yaml
+Copy code
