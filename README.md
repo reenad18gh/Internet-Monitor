@@ -34,4 +34,10 @@ Shows uptime, logs events, sends alerts, and generates a live HTML status page.
 Status Page  
 (Refresh manually to see new data)
 
+https://reenad18gh.github.io/Internet-Monitor/status.html
+
+
+---
+
+## Run
 
